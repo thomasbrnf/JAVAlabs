@@ -1,5 +1,5 @@
 public class Formula {
-    public static float fun(short n, short m) {
+    public static float fun(short n, short m) throws NumberFormatException{
         final short C = 2;
         float ans = 0;
         // summation expression
