@@ -1,27 +1,6 @@
-import java.util.Random;
-
 public class MatrixCalculation {
-    static int[][] a, b, c;
-    Random random;
-    MatrixCalculation(int rows, int columns){
-        random = new Random();
-        // initializing array of arrays a, b, c
-         a = new int[rows][columns];
-         rand(a);
-         b = new int[columns][rows];
-         rand(b);
-         c = new int[rows][rows];
-    }
-    private void rand(int[][] matrix) {
-        // accessing rows
-        for (int j = 0; j < matrix.length; ++j) {
-            // traversing rows with a random value
-            for (int i = 0; i < matrix[j].length; ++i) {
-                matrix[j][i] = random.nextInt(6);
-                }
-            }
-    }
-    public static void multiply(){
+    public static int[][] multiply(int[][] a, int[][] b) throws NumberFormatException{
+        int[][]c = new int[a.length][a.length];
         // traversing an array of arrays, using first for-loop to select rows in matrix a and b
         for (int j = 0; j < a.length; ++j) {
             // second for-loop to access rows in matrix b and c
@@ -35,8 +14,9 @@ public class MatrixCalculation {
             }
             System.out.println();
         }
+        return c;
     }
-    public static void avgInCol(){
+    public static void avgInCol(int[][] c) throws NumberFormatException{
         // traversing an array of arrays (matrix c)
         for (int j = 0; j < c.length; ++j) {
             float avg = 0;
