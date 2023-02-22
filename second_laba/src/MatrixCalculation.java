@@ -1,5 +1,5 @@
 public class MatrixCalculation {
-    public static int[][] multiply(int[][] a, int[][] b) throws NumberFormatException{
+    public static int[][] multiply(int[][] a, int[][] b) {
         int[][]c = new int[a.length][a.length];
         // traversing an array of arrays, using first for-loop to select rows in matrix a and b
         for (int j = 0; j < a.length; ++j) {
@@ -16,7 +16,7 @@ public class MatrixCalculation {
         }
         return c;
     }
-    public static void avgInCol(int[][] c) throws NumberFormatException{
+    public static void avgInCol(int[][] c) {
         // traversing an array of arrays (matrix c)
         for (int j = 0; j < c.length; ++j) {
             float avg = 0;
