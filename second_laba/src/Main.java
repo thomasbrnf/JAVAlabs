@@ -13,18 +13,13 @@ public class Main {
            int[][] b = createRandomMatrix(j,i);
            int[][] c = MatrixCalculation.multiply(a,b);
             MatrixCalculation.avgInCol(c);
-       }catch (ArithmeticException e){
+       }catch (Exception e){
            System.out.println(e.getMessage());
-       }catch (InputMismatchException e){
-           System.out.println(e.getMessage());
-            throw new InputMismatchException("You mast input int value(between 1 and 2,147,483,647) ");
-       }catch (NegativeArraySizeException e){
-           throw new NegativeArraySizeException("Array can`t have a negative size, you must enter a positive value");
        }
     }
-    public static int[][] createRandomMatrix(int rows, int columns) throws NumberFormatException {
+    public static int[][] createRandomMatrix(int rows, int columns) {
         if (rows == 0 || columns == 0){
-            throw new InputMismatchException("Array can`t have 0 size");
+            throw new InputMismatchException("Array can`t have 0 or negative size ");
         }else {
             Random random = new Random();
             int[][] a = new int[rows][columns];

@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -9,10 +8,8 @@ public class Main {
             System.out.print("Enter m: ");
             short m = scanner.nextShort();
             System.out.println(Formula.fun(n,m));
-        } catch (IllegalAccessException e) {
-           System.out.println(e.getMessage());
-        } catch (InputMismatchException e){
-            throw new InputMismatchException("You must enter a short value(between 0 and 32,767)");
+        }  catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         scanner.close();
     }
