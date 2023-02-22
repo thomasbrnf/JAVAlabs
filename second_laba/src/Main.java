@@ -10,8 +10,15 @@ public class Main {
            System.out.println("Enter number of columns for 1st matrix(rows for 2nd): ");
            int j = scanner.nextInt();
            int[][] a = createRandomMatrix(i,j);
+           System.out.println("Matrix A: ");
+           displayMatrix(a);
            int[][] b = createRandomMatrix(j,i);
+           System.out.println("Matrix B: ");
+           displayMatrix(b);
            int[][] c = MatrixCalculation.multiply(a,b);
+           System.out.println("Matrix C(result of multiplication of matrix A and B): ");
+           displayMatrix(c);
+           System.out.println("Average of each column(matrix C):  ");
             MatrixCalculation.avgInCol(c);
        }catch (Exception e){
            System.out.println(e.getMessage());
@@ -31,6 +38,15 @@ public class Main {
                 }
             }
             return a;
+        }
+    }
+    public static void displayMatrix(int[][] matrix){
+        if (matrix == null ) throw new IllegalArgumentException("the matrix, which you trying to display has no data");
+        for (int i = 0; i <matrix.length; ++i){
+            for (int j = 0; j <matrix[i].length; ++j){
+                System.out.print(matrix[i][j] + "\t");
+            }
+            System.out.println();
         }
     }
 }
