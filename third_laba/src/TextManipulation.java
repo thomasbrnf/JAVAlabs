@@ -4,7 +4,7 @@ public class TextManipulation {
         if(!text.contains(".") || !text.contains(" "))throw new IllegalArgumentException("The string must contain at least one sentence(with dot by the end)");
         int index = -1;
         LinkedList<String> sentences = new LinkedList<>();
-        // traversing the text to find dots, and if found splitting the text
+        // traversing the text to find dots, and if found splitting the tex
         for (int i = 0; i < text.length(); ++i) {
             if (text.charAt(i) == '.' && i != text.length()-1) {
                 sentences.add(text.substring(index+1, i+2));
