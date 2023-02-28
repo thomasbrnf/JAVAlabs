@@ -18,7 +18,7 @@ public class TextManipulation {
     }
     private static List<String> splitToWords(String sentence){
         int index = 0;
-        LinkedList<String> words = new LinkedList<>();
+        ArrayList<String> words = new ArrayList<>();
         // traversing the sentence to find whitespace, and if found splitting the sentence
         for (int i = 0; i < sentence.length(); ++i) {
             if (i == sentence.length()-1){
@@ -31,7 +31,7 @@ public class TextManipulation {
         }
         return words;
     }
-    private static StringBuilder listToString(LinkedList<String> words){
+    private static StringBuilder listToString(List<String> words){
         StringBuilder string = new StringBuilder();
         // traversing list of words, and adding them to string
         for (String word : words) {
@@ -46,8 +46,8 @@ public class TextManipulation {
         StringBuilder finalText = new StringBuilder();
         // splitting sentences to words and swapping them
         for (String s : sentences) {
-            LinkedList<String> words = (LinkedList<String>) splitToWords(s);
-            Collections.swap(words, words.indexOf(words.getFirst()), words.indexOf(words.getLast()));
+            List<String> words = splitToWords(s);
+            Collections.swap(words, words.indexOf(words.get(0)), words.indexOf(words.get(words.size()-1)));
             finalText.append(listToString(words));
         }
         return finalText;

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVAlabs.iml" filepath="$PROJECT_DIR$/.idea/JAVAlabs.iml" />
       <module fileurl="file://$PROJECT_DIR$/first_laba/first_laba.iml" filepath="$PROJECT_DIR$/first_laba/first_laba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fourth_laba/fourth_laba.iml" filepath="$PROJECT_DIR$/fourth_laba/fourth_laba.iml" />
       <module fileurl="file://$PROJECT_DIR$/second_laba/second_laba.iml" filepath="$PROJECT_DIR$/second_laba/second_laba.iml" />
       <module fileurl="file://$PROJECT_DIR$/third_laba/third_laba.iml" filepath="$PROJECT_DIR$/third_laba/third_laba.iml" />
     </modules>
