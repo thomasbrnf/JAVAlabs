@@ -1,3 +1,6 @@
+import java.text.CollationElementIterator;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Tank tank = new Tank("M1 Abrams",
@@ -13,10 +16,13 @@ public class Main {
         motorcycle.setSpeed(120);
         System.out.println(tank.getModel() + "\n"
                 + automobile.getModel() + "\n" + motorcycle.getModel());
-        CustomSorter.add(tank.getSpeed());
-        CustomSorter.add(automobile.getSpeed());
-        CustomSorter.add(motorcycle.getSpeed());
-        CustomSorter.descendingOrder();
-        CustomSorter.byGrowth();
+        VehicleSpeedComparator speedComparator = new VehicleSpeedComparator();
+        List<IVehicle> vehicles = new LinkedList<>();
+        vehicles.add(automobile);
+        vehicles.add(tank);
+        vehicles.add(motorcycle);
+        vehicles.sort(speedComparator);
+        System.out.println(vehicles);
+
     }
 }

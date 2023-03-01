@@ -1,6 +1,6 @@
-import java.util.List;
+import java.util.Comparator;
 
-public interface IVehicle {
+public interface IVehicle{
     public int getSpeed();
     public String getModel();
     public int getSPrice();
